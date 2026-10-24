@@ -20,23 +20,27 @@ A sleek **live ticker for your Home Assistant entity states**. Select temperatur
 - Live HA updates without restarting the scrolling animation
 - No manual attribute selection or unit overrides, and no polling service
 
-## HACS installation (custom repository)
+## Installation via HACS
 
-**Not yet included in the official HACS catalog.** Until accepted, install it through a custom repository:
+**Sensor Ticker Card is included in the official HACS catalog.** No custom repository is needed for the normal installation.
 
-1. In HACS, open **Custom repositories**.
-2. Add `https://github.com/HomeAssi82VK/ha-sensor-ticker` and select **Dashboard** (sometimes called **Plugin**).
-3. Install **Sensor Ticker Card**. Choose the latest release (`v1.0.0`).
-4. HACS normally registers the JavaScript dashboard resource automatically. **Reload your browser** and add **Sensor Ticker Card** using the dashboard visual editor.
+1. Open **HACS** in Home Assistant.
+2. Search for **Sensor Ticker Card** and open the result under **Dashboard**.
+3. Select **Download** (or **Install**) and install the current release.
+4. Reload your browser, edit a dashboard and add **Sensor Ticker Card** from the card picker.
 
-If your Home Assistant dashboard resources are managed in YAML, you may need to register the HACS resource manually:
+HACS normally registers the JavaScript dashboard resource automatically. If your dashboard resources are managed manually in YAML, you may need to add:
 
 ```yaml
 url: /hacsfiles/ha-sensor-ticker/sensor-ticker-card.js
 type: module
 ```
 
-Do not add a separate integration in **Devices & services**: this project is a frontend-only dashboard card. No Core restart is needed.
+### Fallback: HACS custom repository
+
+If **Sensor Ticker Card** is not yet available in your HACS search results, open **HACS → Custom repositories**, add `https://github.com/HomeAssi82VK/ha-sensor-ticker` as **Dashboard** (also called **Plugin**) and install it from there.
+
+Do not add a separate integration in **Devices & services**: this project is a frontend-only dashboard card. No Home Assistant Core restart is needed.
 
 ## Manual installation (without HACS)
 
