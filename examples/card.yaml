@@ -1,0 +1,30 @@
+type: custom:sensor-ticker-card
+title: LIVE
+mode: continuous
+theme: default
+speed: 62
+height: 58
+font_size: 15
+show_clock: true
+show_icons: true
+show_names: true
+show_units: true
+entities:
+  - entity: sensor.example_temperature
+    name: Raumtemperatur
+    icon: mdi:thermometer
+    decimals: '1'
+    enabled: true
+  - entity: sensor.example_humidity
+    name: Luftfeuchtigkeit
+    icon: mdi:water-percent
+    decimals: '0'
+    enabled: true
+  - entity: sensor.example_power
+    name: Leistung
+    icon: mdi:flash
+    enabled: true
+  - entity: binary_sensor.example_door
+    name: Haustür
+    icon: mdi:door
+    enabled: true
