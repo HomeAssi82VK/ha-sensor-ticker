@@ -8,6 +8,10 @@ A sleek **live ticker for your Home Assistant entity states**. Select temperatur
 
 *Illustration with simulated sensor values; the final appearance depends on your Home Assistant theme.*
 
+### Animation Preview
+
+![Sensor Ticker Card animations](https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif)
+
 ## Features
 
 - Select, activate, reorder and rename up to **30 entities per card** in the visual editor
