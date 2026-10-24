@@ -20,21 +20,25 @@
 
 ## Installation über HACS
 
-**Noch nicht im offiziellen HACS-Katalog gelistet.** Bis zur Aufnahme funktioniert die Installation über ein benutzerdefiniertes Repository:
+**Sensor Ticker Card ist im offiziellen HACS-Katalog aufgenommen.** Für die normale Installation musst du kein benutzerdefiniertes Repository mehr hinzufügen.
 
-1. In HACS → **Benutzerdefinierte Repositories** öffnen.
-2. `https://github.com/HomeAssi82VK/ha-sensor-ticker` als Typ **Dashboard** (teils **Plugin** genannt) hinzufügen.
-3. **Sensor Ticker Card** in Version `v1.0.0` installieren.
-4. HACS trägt die JavaScript-Ressource normalerweise selbst ein. Browser aktualisieren und die **Sensor Ticker Card** im Dashboard hinzufügen.
+1. **HACS** in Home Assistant öffnen.
+2. Nach **Sensor Ticker Card** suchen und den Eintrag unter **Dashboard** öffnen.
+3. **Herunterladen** beziehungsweise **Installieren** auswählen und die aktuelle Version installieren.
+4. Browser neu laden, Dashboard bearbeiten und die **Sensor Ticker Card** über die Kartenauswahl hinzufügen.
 
-Bei manuell verwalteten Ressourcen im YAML-Modus gegebenenfalls selbst eintragen:
+HACS trägt die JavaScript-Ressource normalerweise automatisch ein. Wenn du deine Dashboard-Ressourcen manuell per YAML verwaltest, kann dieser Eintrag nötig sein:
 
 ```yaml
 url: /hacsfiles/ha-sensor-ticker/sensor-ticker-card.js
 type: module
 ```
 
-**Kein HA-Neustart, keine Integration unter Geräte & Dienste.**
+### Alternative: Benutzerdefiniertes HACS-Repository
+
+Falls die **Sensor Ticker Card** noch nicht in der HACS-Suche erscheint, unter **HACS → Benutzerdefinierte Repositories** die Adresse `https://github.com/HomeAssi82VK/ha-sensor-ticker` als Kategorie **Dashboard** (auch **Plugin** genannt) hinzufügen und von dort installieren.
+
+**Kein Home-Assistant-Core-Neustart und keine zusätzliche Integration unter Geräte & Dienste nötig.**
 
 ## Manuell installieren (ohne HACS)
 
