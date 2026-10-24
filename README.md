@@ -10,7 +10,7 @@ A sleek **live ticker for your Home Assistant entity states**. Select temperatur
 
 ### Animation Preview
 
-![Sensor Ticker Card animations](https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif)
+<img src="https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif" alt="Sensor Ticker Animationen" width="1000">
 
 ## Features
 
