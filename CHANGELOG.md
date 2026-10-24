@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1] - 2026-10-25
+
+- Added an animated preview of the three ticker modes to the English and German README files.
+- Updated HACS installation instructions for the official catalog listing.
+- Updated version labels and release documentation to v1.0.1.
+- No changes to card features, settings or animation logic; existing dashboards remain compatible.
+
 ## [1.0.0] - 2026-10-24
 
 - Removed the Beta label; first public stable-version release.
@@ -10,4 +17,4 @@
 - Retained existing entity configuration, live updates, animation modes and icon picker.
 - Migrates previous theme settings automatically without editing existing dashboards.
 
-**Note:** A stable version number does not imply review by the official HACS catalog. Install as a custom HACS Dashboard repository until accepted.
+**Historical note:** v1.0.0 was initially published before official HACS admission. Sensor Ticker Card is now included in the official HACS catalog.

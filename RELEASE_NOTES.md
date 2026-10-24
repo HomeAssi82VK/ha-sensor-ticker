@@ -1,18 +1,18 @@
-# Sensor Ticker Card v1.0.0
+# Sensor Ticker Card v1.0.1
 
-**A live, animated Home Assistant sensor ticker – no RSS, no backend, no extra integration.**
+A documentation and animation-preview update for Sensor Ticker Card in Home Assistant.
 
-### Highlights
+### What's changed
 
-- Five versatile themes: **Default, Dark, Light, Blue, Purple**
-- **Custom** with eight color controls and optional transparency
-- Rounded design, chevron label, live theme preview
-- Up to 30 entities with automatic Home Assistant states and units
-- Three animations, MDI icons, clock and visual editor
-- Compatible with existing Sensor Ticker configurations; old themes are migrated automatically
+- Added an animated ticker-mode preview to both README files.
+- Updated installation instructions for the official HACS Dashboard catalog.
+- Updated version labels to v1.0.1.
+- No change to ticker features, settings or animation logic; existing dashboards stay compatible.
 
-### Installation
+### Update
 
-Not yet included in the official HACS catalog. Add `https://github.com/HomeAssi82VK/ha-sensor-ticker` as a custom **Dashboard** repository in HACS, or install the JavaScript module manually. See [README.md](https://github.com/HomeAssi82VK/ha-sensor-ticker).
+Open **HACS → Sensor Ticker Card** and update to **v1.0.1**. Reload the browser (hard refresh if needed); no Home Assistant Core restart is required.
 
-If upgrading a manually installed version, replace `sensor-ticker-card.js` and update the resource cache parameter to `?v=1.0.0`.
+If the card is not yet visible in HACS search, add `https://github.com/HomeAssi82VK/ha-sensor-ticker` as a custom **Dashboard** repository.
+
+For manual installations, replace `dist/sensor-ticker-card.js` and use `?v=1.0.1` in the dashboard resource URL.

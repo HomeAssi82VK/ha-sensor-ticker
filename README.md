@@ -2,7 +2,7 @@
 
 A sleek **live ticker for your Home Assistant entity states**. Select temperatures, energy readings, humidity, doors and much more; Sensor Ticker uses their actual state and units from Home Assistant. **No RSS feeds, backend or separate integration required.**
 
-**Current version:** `v1.0.0` · First public stable release · [Deutsche Anleitung](README.de.md) · [Changelog](CHANGELOG.md) · [Report issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues)
+**Current version:** `v1.0.1` · Documentation and animation preview update · [Deutsche Anleitung](README.de.md) · [Changelog](CHANGELOG.md) · [Report issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues)
 
 ![Sensor Ticker Card showing example sensor readings](docs/images/sensor-ticker-preview.png)
 
@@ -50,7 +50,7 @@ Do not add a separate integration in **Devices & services**: this project is a f
 
 1. Download a release/source ZIP and extract it.
 2. Copy `dist/sensor-ticker-card.js` to `/config/www/sensor-ticker-card.js`.
-3. Under **Settings → Dashboards → Resources**, add `/local/sensor-ticker-card.js?v=1.0.0` as a **JavaScript module**.
+3. Under **Settings → Dashboards → Resources**, add `/local/sensor-ticker-card.js?v=1.0.1` as a **JavaScript module**.
 4. Reload the browser (hard refresh if necessary); add **Sensor Ticker Card** from the card picker.
 
 **Migrating from manual to HACS:** Remove the old `/local/sensor-ticker-card.js` dashboard resource once the HACS resource is active. Loading both can leave you on a cached older version. Existing card configurations can remain.
@@ -63,11 +63,11 @@ An example is in [`examples/card.yaml`](examples/card.yaml). Missing and unavail
 
 ## Compatibility and feedback
 
-Tested in one Home Assistant setup; different browsers and dashboards still need community testing. Issues and suggestions: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues). This is an independent community project, not affiliated with Home Assistant. v1.0.0 is a stable-version label; the new themes still benefit from wider real-world testing.
+Tested in one Home Assistant setup; different browsers and dashboards still need community testing. Issues and suggestions: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues). This is an independent community project, not affiliated with Home Assistant. v1.0.1 retains the existing features and benefits from wider community testing.
 
 ## Release and updates
 
-See [CHANGELOG.md](CHANGELOG.md). Every published release should use a matching tag such as `v1.0.0`. HACS checks this repository as a **Dashboard/Plugin**, not an **Integration**.
+See [CHANGELOG.md](CHANGELOG.md). Every published release should use a matching tag such as `v1.0.1`. HACS checks this repository as a **Dashboard/Plugin**, not an **Integration**.
 
 ## Support ☕
 

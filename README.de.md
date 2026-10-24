@@ -1,12 +1,12 @@
 # Sensor Ticker Card – Deutsche Anleitung
 
-**Sensor Ticker v1.0.0** ist eine eigenständige Dashboard-Karte, die Home-Assistant-Entitäten als animierte Laufschrift darstellt. **Keine RSS-Feeds, kein Backend, keine weitere HA-Integration.**
+**Sensor Ticker v1.0.1** ist eine eigenständige Dashboard-Karte, die Home-Assistant-Entitäten als animierte Laufschrift darstellt. **Keine RSS-Feeds, kein Backend, keine weitere HA-Integration.**
 
 ![Sensor Ticker mit Beispielwerten](docs/images/sensor-ticker-preview.png)
 
 *Illustration mit fiktiven Sensorwerten; tatsächliche Optik kann je nach Home-Assistant-Theme leicht abweichen.*
 
-### Animation Preview
+### Animationsvorschau
 
 ![Sensor Ticker Animation](https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif)
 
@@ -49,7 +49,7 @@ Falls die **Sensor Ticker Card** noch nicht in der HACS-Suche erscheint, unter *
 1. ZIP entpacken, `dist/sensor-ticker-card.js` nach `/config/www/sensor-ticker-card.js` kopieren.
 2. Unter **Einstellungen → Dashboards → Ressourcen** als JavaScript-Modul hinzufügen:
 
-   `/local/sensor-ticker-card.js?v=1.0.0`
+   `/local/sensor-ticker-card.js?v=1.0.1`
 
 3. Browser mit **Strg + F5** aktualisieren, Dashboard bearbeiten, Sensor Ticker Card auswählen.
 

@@ -1,9 +1,9 @@
-/* Sensor Ticker Card v1.0.0 - independent Home Assistant dashboard card.
+/* Sensor Ticker Card v1.0.1 - independent Home Assistant dashboard card.
  * No external services, RSS feeds, backend, or dependencies.
  */
 (() => {
   "use strict";
-  const VERSION = "1.0.0";
+  const VERSION = "1.0.1";
   const MAX_ENTITIES = 30;
   // Five self-contained looks, inspired by the Sensor Ticker preview.
   // "Custom" inherits the Default palette and exposes every color in the editor.
