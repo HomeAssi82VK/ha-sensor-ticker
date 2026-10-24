@@ -6,6 +6,10 @@
 
 *Illustration mit fiktiven Sensorwerten; tatsächliche Optik kann je nach Home-Assistant-Theme leicht abweichen.*
 
+### Animation Preview
+
+<img src="https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif" alt="Sensor Ticker Animation" width="1000">
+
 ## Funktionen
 
 - Bis zu 30 Entitäten auswählen, aktivieren, sortieren und umbenennen
