@@ -8,7 +8,7 @@
 
 ### Animation Preview
 
-<img src="https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif" alt="Sensor Ticker Animation" width="1000">
+![Sensor Ticker Animation](https://raw.githubusercontent.com/HomeAssi82VK/ha-sensor-ticker/main/docs/images/ani.gif)
 
 ## Funktionen
 
