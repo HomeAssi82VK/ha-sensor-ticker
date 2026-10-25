@@ -1,0 +1,33 @@
+# Sensor Ticker Card v1.1.0 – Multi-Row Beispiel
+# Entitaets-IDs durch eigene ersetzen; alle Optionen sind im grafischen Editor editierbar.
+type: custom:sensor-ticker-card
+row_gap: 0
+outer_border: true
+align_titles: false
+rows:
+  - title: ENERGIE
+    title_shape: straight
+    title_width: 135
+    theme: default
+    mode: continuous
+    speed: 62
+    height: 58
+    border_mode: none
+    entities:
+      - entity: sensor.example_power
+        name: Strom
+        icon: mdi:flash
+  - title: KLIMA
+    title_shape: straight
+    title_width: 135
+    theme: custom
+    mode: slide
+    interval: 6
+    height: 58
+    transparent_bg: true
+    border_mode: line
+    border_color: '#04bcd5'
+    entities:
+      - entity: sensor.example_temperature
+        name: Raum
+        icon: mdi:thermometer

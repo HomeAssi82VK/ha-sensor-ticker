@@ -2,7 +2,7 @@
 
 A sleek **live ticker for your Home Assistant entity states**. Select temperatures, energy readings, humidity, doors and much more; Sensor Ticker uses their actual state and units from Home Assistant. **No RSS feeds, backend or separate integration required.**
 
-**Current version:** `v1.0.1` · Documentation and animation preview update · [Deutsche Anleitung](README.de.md) · [Changelog](CHANGELOG.md) · [Report issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues)
+**Current version:** `v1.1.0` · Multi-Row Ticker with per-row visual controls · [Deutsche Anleitung](README.de.md) · [Changelog](CHANGELOG.md) · [Report issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues)
 
 ![Sensor Ticker Card showing example sensor readings](docs/images/sensor-ticker-preview.png)
 
@@ -14,12 +14,15 @@ A sleek **live ticker for your Home Assistant entity states**. Select temperatur
 
 ## Features
 
-- Select, activate, reorder and rename up to **30 entities per card** in the visual editor
+- Use up to **12 independent ticker rows**, each with up to **30 entities**, configured in one visual editor
 - Automatically display the actual HA **state and unit of measurement** (`°C`, `%`, `W`, `kWh`, etc.)
 - MDI icon picker with previews; automatic HA icons or your own `mdi:` icon
 - Three animation modes: continuous marquee, slide and fade
 - Six appearance options: Default, Dark, Light, Blue, Purple and Custom (eight adjustable colors and optional transparency)
-- Configurable height, fonts, speed, numerical decimals, labels and optional clock
+- Independently set each row’s height, fonts, speed, colors, animation, clock and up to 30 entities
+- Configure per-row title shape (**pointed / rounded / straight**) and manual title width (55–360 px)
+- Optional shared title alignment, individual row borders, separators, row gap and transparent backgrounds
+- Legacy **v1.0.1 single-row cards continue working without changing their YAML**
 - Click a value to open the entity's More Info dialog
 - Live HA updates without restarting the scrolling animation
 - No manual attribute selection or unit overrides, and no polling service
@@ -50,24 +53,24 @@ Do not add a separate integration in **Devices & services**: this project is a f
 
 1. Download a release/source ZIP and extract it.
 2. Copy `dist/sensor-ticker-card.js` to `/config/www/sensor-ticker-card.js`.
-3. Under **Settings → Dashboards → Resources**, add `/local/sensor-ticker-card.js?v=1.0.1` as a **JavaScript module**.
+3. Under **Settings → Dashboards → Resources**, add `/local/sensor-ticker-card.js?v=1.1.0` as a **JavaScript module**.
 4. Reload the browser (hard refresh if necessary); add **Sensor Ticker Card** from the card picker.
 
 **Migrating from manual to HACS:** Remove the old `/local/sensor-ticker-card.js` dashboard resource once the HACS resource is active. Loading both can leave you on a cached older version. Existing card configurations can remain.
 
 ## Configure
 
-Use the visual editor to choose Home Assistant entities, set a display name/icon, order rows and select a design. The card reads `state` and `unit_of_measurement` from each selected entity, not arbitrary attributes. The number of decimals only affects formatting, not unit conversion.
+Use the visual editor to add/remove/duplicate/reorder ticker rows, then choose entities and configure each row independently. Set individual title widths using the per-row slider. For an existing single-row card, you can keep the original YAML and add rows using the editor. The card reads `state` and `unit_of_measurement` from each selected entity, not arbitrary attributes. The number of decimals only affects formatting, not unit conversion.
 
-An example is in [`examples/card.yaml`](examples/card.yaml). Missing and unavailable entities are indicated on screen.
+Examples: [single-row (legacy-compatible)](examples/card.yaml) and [multi-row](examples/multi-row.yaml). Missing and unavailable entities are indicated on screen.
 
 ## Compatibility and feedback
 
-Tested in one Home Assistant setup; different browsers and dashboards still need community testing. Issues and suggestions: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues). This is an independent community project, not affiliated with Home Assistant. v1.0.1 retains the existing features and benefits from wider community testing.
+Tested in one Home Assistant setup; different browsers and dashboards still need community testing. Issues and suggestions: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues). This is an independent community project, not affiliated with Home Assistant. v1.1.0 adds the locally tested multi-row configuration. Additional community testing is welcome.
 
 ## Release and updates
 
-See [CHANGELOG.md](CHANGELOG.md). Every published release should use a matching tag such as `v1.0.1`. HACS checks this repository as a **Dashboard/Plugin**, not an **Integration**.
+See [CHANGELOG.md](CHANGELOG.md). Every published release should use a matching tag such as `v1.1.0`. HACS checks this repository as a **Dashboard/Plugin**, not an **Integration**.
 
 ## Support ☕
 
@@ -78,3 +81,7 @@ If you enjoy Sensor Ticker, you can [buy me a coffee](https://buymeacoffee.com/h
 ## License
 
 [MIT](LICENSE) · Copyright © 2026 HomeAssi82VK
+
+### Updating from v1.0.1 or local multi-row tests
+
+HACS keeps existing `type: custom:sensor-ticker-card` configurations working, including legacy top-level `title`, `entities`, and `theme` fields. New or edited cards can use the `rows:` format. To migrate an existing local **Multi-Row (TEST)** card, update its YAML card type from `custom:sensor-ticker-multirow-test` to `custom:sensor-ticker-card`; keep its `rows:` and settings unchanged. Once all test cards are migrated, remove the old `/local/sensor-ticker-multirow-test.js` resource to avoid loading two variants. No Home Assistant Core restart is necessary; hard-refresh your browser after updating HACS.

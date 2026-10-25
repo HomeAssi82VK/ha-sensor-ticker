@@ -1,18 +1,19 @@
-# Sensor Ticker Card v1.0.1
+# Sensor Ticker Card v1.1.0
 
-A documentation and animation-preview update for Sensor Ticker Card in Home Assistant.
+Multi-Row Ticker: the established Sensor Ticker Card can now show up to **12 independent animated ticker rows in one card**, without a stack card.
 
-### What's changed
+### New
+- Add, duplicate, rearrange and remove ticker rows in the visual editor (up to 30 entities per row).
+- Set theme, colors, opacity, animation, speed, font size, height, units, clock and title separately for every row.
+- Choose each title's shape: pointed, rounded or straight.
+- Adjust each title width precisely (55–360 px) with an individual slider or enable optional shared alignment.
+- Select no border, a separator line, or a full frame for each ticker row and customize border color/spacing.
 
-- Added an animated ticker-mode preview to both README files.
-- Updated installation instructions for the official HACS Dashboard catalog.
-- Updated version labels to v1.0.1.
-- No change to ticker features, settings or animation logic; existing dashboards stay compatible.
+### Compatibility
+- Existing cards with `type: custom:sensor-ticker-card` and original v1.0.1 top-level settings are still supported. No manual YAML migration is required.
+- Existing local `custom:sensor-ticker-multirow-test` cards can be migrated by changing only their `type:` to `custom:sensor-ticker-card` **after** the official HACS update.
+- Once migrated, remove the obsolete local test JS resource from Dashboard Resources.
+- No Home Assistant Core restart required. Refresh the browser after installing via HACS.
 
-### Update
-
-Open **HACS → Sensor Ticker Card** and update to **v1.0.1**. Reload the browser (hard refresh if needed); no Home Assistant Core restart is required.
-
-If the card is not yet visible in HACS search, add `https://github.com/HomeAssi82VK/ha-sensor-ticker` as a custom **Dashboard** repository.
-
-For manual installations, replace `dist/sensor-ticker-card.js` and use `?v=1.0.1` in the dashboard resource URL.
+### Installation
+Use HACS → Sensor Ticker Card → Update → v1.1.0, or replace `dist/sensor-ticker-card.js` for manual installs and change the resource URL to `/local/sensor-ticker-card.js?v=1.1.0`.

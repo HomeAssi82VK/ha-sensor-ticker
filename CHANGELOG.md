@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0] - 2026-10-25
+
+- Added multi-row support: up to 12 separately configured ticker rows in a single card; up to 30 entities per row.
+- Each row can independently customize its theme, colors, transparency, height, font size, icons, labels, clock, speed, and animation.
+- Added optional per-row frames or separator lines, configurable border colors and spacing.
+- Added title shapes (pointed, rounded, straight), a per-row title-width slider (55–360px), and optional automatic alignment.
+- Preserved the existing `custom:sensor-ticker-card` Lovelace type and legacy v1.0.1 top-level single-row YAML.
+- New `rows:` format is compatible with the locally tested Multi-Row prototype when its card type is switched to the official type.
+- Kept native Home Assistant entity state/units, More Info actions, and the visual editor.
+
+
 ## [1.0.1] - 2026-10-25
 
 - Added an animated preview of the three ticker modes to the English and German README files.

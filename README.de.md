@@ -1,6 +1,6 @@
 # Sensor Ticker Card – Deutsche Anleitung
 
-**Sensor Ticker v1.0.1** ist eine eigenständige Dashboard-Karte, die Home-Assistant-Entitäten als animierte Laufschrift darstellt. **Keine RSS-Feeds, kein Backend, keine weitere HA-Integration.**
+**Sensor Ticker v1.1.0** ist eine eigenständige Dashboard-Karte, die Home-Assistant-Entitäten als animierte Laufschrift darstellt. **Keine RSS-Feeds, kein Backend, keine weitere HA-Integration.**
 
 ![Sensor Ticker mit Beispielwerten](docs/images/sensor-ticker-preview.png)
 
@@ -12,12 +12,15 @@
 
 ## Funktionen
 
-- Bis zu 30 Entitäten auswählen, aktivieren, sortieren und umbenennen
+- Bis zu **12 unabhängige Tickerzeilen** mit jeweils **30 Entitäten** hinzufügen, duplizieren, verschieben und löschen
 - Werte und Einheiten **direkt aus Home Assistant** (`state`, `unit_of_measurement`)
 - Icons über Dropdown mit Vorschau, eigene `mdi:`-Icons weiterhin möglich
 - Drei Animationen: Endloslauf, Ein-/Ausfahren, Überblenden
 - Sechs Designoptionen: Default, Dark, Light, Blue, Purple und Custom (acht frei einstellbare Farben sowie optionale Transparenz)
-- Höhe, Schrift, Geschwindigkeit, Nachkommastellen und Uhr einstellbar
+- Höhe, Schrift, Geschwindigkeit, Nachkommastellen und Uhr **für jede Zeile separat** einstellbar
+- Titelform **spitz, rund oder gerade**, Titelbreite je Zeile per Schieberegler (55–360 px)
+- Optionale gemeinsame Titelausrichtung, Rahmen/Trennlinie je Zeile, Abstände und transparente Hintergründe
+- Bisherige **v1.0.1 Single-Row-Karten bleiben ohne YAML-Anpassung funktionsfähig**
 - Klick auf einen Eintrag öffnet die Entitätsdetails
 - Werte ändern sich live, ohne die Animation neu zu starten
 - Keine unnötige Attributauswahl oder manuelle Einheitenüberschreibung
@@ -49,7 +52,7 @@ Falls die **Sensor Ticker Card** noch nicht in der HACS-Suche erscheint, unter *
 1. ZIP entpacken, `dist/sensor-ticker-card.js` nach `/config/www/sensor-ticker-card.js` kopieren.
 2. Unter **Einstellungen → Dashboards → Ressourcen** als JavaScript-Modul hinzufügen:
 
-   `/local/sensor-ticker-card.js?v=1.0.1`
+   `/local/sensor-ticker-card.js?v=1.1.0`
 
 3. Browser mit **Strg + F5** aktualisieren, Dashboard bearbeiten, Sensor Ticker Card auswählen.
 
@@ -59,7 +62,7 @@ Falls die **Sensor Ticker Card** noch nicht in der HACS-Suche erscheint, unter *
 
 Die Karte zeigt den echten Zustand jeder Entität und übernimmt Maßeinheiten automatisch aus Home Assistant. Nachkommastellen formatieren nur Zahlen; sie rechnen keine Einheiten um. Für Thermostat-Temperaturen einen separaten Temperatursensor auswählen, falls der normale Zustand eines `climate.*`-Objekts kein Temperaturwert ist.
 
-Beispiel: [`examples/card.yaml`](examples/card.yaml). Fehler und Vorschläge: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues).
+Beispiele: [bisherige Einzelzeile](examples/card.yaml) und [mehrere Zeilen](examples/multi-row.yaml). Fehler und Vorschläge: [GitHub Issues](https://github.com/HomeAssi82VK/ha-sensor-ticker/issues).
 
 ## Projekt unterstützen ☕
 
@@ -71,3 +74,9 @@ Beispiel: [`examples/card.yaml`](examples/card.yaml). Fehler und Vorschläge: [G
 
 Bestehende Kartenkonfigurationen bleiben erhalten. Die früheren Themes werden automatisch zugeordnet: `nightglow` → Default, `minimal` → Dark, `tv` → Blue, `transparent` → Custom mit transparentem Hintergrund. Die alten Attribute- und Einheiteneinstellungen werden weiterhin ignoriert.
 
+
+## Update von v1.0.1 oder lokaler Multi-Row-Testkarte
+
+Die offizielle Karte heißt weiterhin `custom:sensor-ticker-card`. Bestehende Single-Row-Karten mit `title:`, `entities:` usw. laufen ohne Änderungen weiter; der grafische Editor kann sie auf mehrere `rows:` erweitern.
+
+Falls du eine lokale **Multi-Row (TEST)**-Karte nutzt, ändere in deren YAML **nur** die erste Zeile von `type: custom:sensor-ticker-multirow-test` auf `type: custom:sensor-ticker-card`. Alle bestehenden `rows:` und die Titelschieberegler bleiben erhalten. Wenn keine Testkarten mehr genutzt werden, entferne die lokale Ressource `/local/sensor-ticker-multirow-test.js` unter **Einstellungen → Dashboards → Ressourcen**. Den HACS-Eintrag behalten. Nach dem HACS-Update **Strg + F5** drücken. Kein Home-Assistant-Neustart notwendig.
